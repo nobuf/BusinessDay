@@ -1,13 +1,14 @@
 <?php /** @noinspection NonAsciiCharacters */
 
-namespace App;
+namespace App\非営業日;
 
+use App\非営業日;
 use DateTimeImmutable;
 use DateTimeInterface;
 use Exception;
 use SplFileObject;
 
-class 祝日
+class 祝日 implements 非営業日
 {
 	private string $filePath;
 
@@ -38,7 +39,7 @@ class 祝日
 		}
 	}
 
-	public function is祝日(DateTimeInterface $dateTime): bool
+	public function is非営業日(DateTimeInterface $dateTime): bool
 	{
 		$dateTimeAsString = $dateTime->format('Y-m-d');
 

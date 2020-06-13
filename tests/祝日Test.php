@@ -1,13 +1,13 @@
 <?php /** @noinspection NonAsciiCharacters */
 
-use App\祝日;
+use App\非営業日\祝日;
 
 test('与えられた日は祝日', function (bool $expected, string $input) {
 	$祝日 = new 祝日(
 		__DIR__ . '/../data/syukujitsu.csv'
 	);
 
-	assertSame($expected, $祝日->is祝日(new DateTimeImmutable($input)));
+	assertSame($expected, $祝日->is非営業日(new DateTimeImmutable($input)));
 })->with(function () {
 	yield [false, '2020-06-05'];
 	yield [false, '2020-06-06'];
