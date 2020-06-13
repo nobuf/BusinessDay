@@ -11,16 +11,16 @@ use DateTimeInterface;
  */
 class その他の休日 implements 非営業日
 {
-	const 休日 = [
-		'2020-12-30',
-		'2020-12-31',
-		'2021-01-01',
-		'2021-01-02',
-		'2021-01-03',
-	];
+    const 休日 = [
+        '2020-12-30',
+        '2020-12-31',
+        '2021-01-01',
+        '2021-01-02',
+        '2021-01-03',
+    ];
 
-	public function is非営業日(DateTimeInterface $dateTime): bool
-	{
-		return in_array($dateTime->format('Y-m-d'), self::休日, true);
-	}
+    public function is非営業日(DateTimeInterface $dateTime): bool
+    {
+        return in_array($dateTime->format('Y-m-d'), self::休日, true);
+    }
 }

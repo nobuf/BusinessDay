@@ -6,5 +6,5 @@ use DateTimeInterface;
 
 interface 非営業日
 {
-	public function is非営業日(DateTimeInterface $dateTime): bool;
+    public function is非営業日(DateTimeInterface $dateTime): bool;
 }

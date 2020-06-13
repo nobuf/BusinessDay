@@ -7,11 +7,11 @@ use DateTimeInterface;
 
 class 土日 implements 非営業日
 {
-	public function is非営業日(DateTimeInterface $dateTime): bool
-	{
-		return in_array($dateTime->format('l'), [
-			'Saturday',
-			'Sunday',
-		], true);
-	}
+    public function is非営業日(DateTimeInterface $dateTime): bool
+    {
+        return in_array($dateTime->format('l'), [
+            'Saturday',
+            'Sunday',
+        ], true);
+    }
 }
